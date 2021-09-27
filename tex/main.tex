@@ -4,7 +4,7 @@
 \usepackage{epigraph}
 
 \usepackage{titling}
-\title{2020 Taiwan Online Programming Contest}
+\title{2021 Taiwan Online Programming Contest}
 
 \usepackage[xetex,
 			pdfencoding=auto,
@@ -12,7 +12,7 @@
             pdfcreator={}]{hyperref}
 			
 \usepackage[left=20mm, right=20mm, top=20mm, bottom=25mm]{geometry}
-\setlength{\headheight}{16mm}
+\setlength{\headheight}{24mm}
 \setlength{\headsep}{2mm}
 \setlength{\parindent}{0mm}
 \usepackage[compact]{titlesec}
@@ -46,7 +46,7 @@
 \fancypagestyle{document}
 {
 	\fancyhf{}
-	\fancyhead[C]{\includegraphics[width=1\textwidth]{image/header.png}\\2020 ICPC Taiwan Online Programming Contest}
+	\fancyhead[C]{\includegraphics[width=1\textwidth]{image/header.png}\\2021 ICPC Taiwan Online Programming Contest}
 	%\fancyhead[R]{International Collegiate Programming Contest\\[1mm]Taiwan Online Programming Contest\vspace{1mm}}
     \fancyfoot[C]{\thepage}
 }
@@ -97,6 +97,7 @@
 
 \newcommand{\problem}[4] % dir, title, time, memory
 {
+    % \vspace*{8mm}
 	\checkoddpage
 	\ifoddpage
 		% do nothing
@@ -108,7 +109,7 @@
 	\fi
 
 	\stepcounter{pid}
-    \vspace*{-8mm}
+    % \vspace*{-8mm}
     \begin{center}
 		{\Large Problem \Alph{pid}}\\[2mm]
 		{\LARGE #2}\\[2mm]
@@ -150,15 +151,15 @@
 \belowdisplayskip=2pt
 
 %\tableofcontents
-\vspace*{8mm}
-\problem{A}{Pac-Man}{1}{1024}
-\problem{B}{Folding}{2}{1024}
-\problem{C}{Circles}{8}{1024}
-\problem{D}{Last Will}{1}{1024}
-\problem{E}{Eric's Work}{5}{1024}
-\problem{F}{Homework}{3}{1024}
-\problem{G}{Garden}{10}{1024}
-\problem{H}{In The Name Of Confusion}{2}{1024}
-\problem{I}{Site Score}{1}{1024}
-\problem{J}{Table Tennis}{5}{1024}
+%\vspace*{8mm}
+\problem{A}{Olympic Ranking}{1}{1024}
+\problem{B}{Perfect Number}{2}{1024}
+\problem{C}{Return Home}{3}{1024}
+\problem{D}{Drunk Passenger}{2}{1024}
+\problem{E}{Mountain Park}{5}{1024}
+\problem{F}{F}{3}{1024}
+\problem{G}{G}{3}{1024}
+\problem{H}{H}{3}{1024}
+\problem{I}{I}{3}{1024}
+\problem{J}{J}{3}{1024}
 \end{document}
