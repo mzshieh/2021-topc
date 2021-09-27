@@ -1,0 +1,24 @@
+\epigraph{There's no such thing as public opinion.}{\textit{Jordan Ellenberg, American Mathematician}}
+
+In K City lives $n$ residents who want to build a connection network with 
+each other. However, some residents want the network wires colored black while 
+the others want the wires colored white. The opinion of resident $i$ can be 
+quantified as a number $a_i$. If we build a network wire between residents 
+$i$ and $j$, the cost of this wire will be $a_i \times a_j$.
+
+The mayor of K City wants to build a network such that:
+
+\begin{enumerate}
+\tightlist
+\item There are exactly $n - 1$ wires used.
+\item For any two different residents $i$ and $j$, there exists a sequence 
+$p_1, \cdots, p_k$ such that $p_1=i$, $p_k=j$ and residents $p_\ell$ and 
+$p_{\ell+1}$ share a wire for $1\le \ell < k$.
+\end{enumerate}
+
+In other words, the network should be a tree.
+
+You, the renowned mathematician of K City, want to know not only the 
+\emph{minimum} 
+cost to build the network. In the name of confusion, you also want to know the
+\emph{maximum} cost!

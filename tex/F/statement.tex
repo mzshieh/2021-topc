@@ -1,0 +1,32 @@
+There are $n$ children (numbered from $1$ to $n$) learning
+the arithmetic operations, which include \emph{addition} ``$+$'', 
+\emph{subtraction} ``$-$'', 
+\emph{multiplication} ``$\times$'', and \emph{division} ``$\div$'' on 
+rational numbers.
+
+In the beginning, each child has a paper sheet with only a zero on it. 
+Their teacher, Frank, will then give them $q$ operations. 
+The $i$-th operation consists of an operator $c_i$ and an integer $x_i$.
+The children numbered $\ell_i,\ell_i+1,\dots,r_i$ have to append the 
+operator $c_i$ and the integer $x_i$ to their paper sheets.
+After that, every child has an expression on their sheet to be evaluated.
+
+For example, suppose that $n=3$, $q=2$, $c_1$ is ``$+$'', $x_1=1$, $\ell_1=1$, 
+$r_1=2$, $c_2$ is ``$-$'',  $x_2=2$, $\ell_2=2$, and $r_2=3$. 
+The expressions on the sheets are are $0+1$, $0+1-2$ and $0-2$ for 
+children 1, 2 and 3, respectively.
+
+Since Frank is really lazy and wants to verify the answers quickly,
+he asks you to calculate the sums of the values of all children's 
+expressions. 
+Suppose that the value of the expression assigned to child $i$ is 
+$\frac{a_i}{b_i}$, 
+then the value will be $a\times b^{-1}\bmod 10^9+7$ instead, 
+where $b^{-1}$ denotes the integer satisfying 
+$b\times b^{-1}\equiv 1\mod 10^9+7$. 
+If the sum is not in $[0, 10^9+7)$, then the sum modulo $10^9+7$ should be
+returned to Frank.
+
+Note: The arithmetic operations has PEMDAS rule, that is, 
+multiplications and divisions should be evaluated before evaluating additions
+and subtraction.
