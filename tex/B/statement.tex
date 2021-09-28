@@ -1,33 +1,17 @@
-There is a transparent tape. Its length is exact one meter ($10^9$ nanometers).
-In this problem, all numbers are integers, and we use a number to denote 
-a position on the tape. The number $p$ denote the position of the point
-has a distance $p$ nanometers from the head of the tape.
+A divisor of a positive integer $n$ is an integer $d$ where $m=\frac{n}{d}$ 
+is an integer. 
+In this problem, we define the aliquot sum $s(n)$ of a positive integer $n$ 
+as the sum of all divisors of $n$ other than $n$ itself. 
+For examples, $s(12)=1+2+3+4+6=16$, $s(21)=1+3+7=11$, and $s(28)=1+2+4+7+14=28$.
 
-Bob is a master dyer, so he can color the tape precisely in nanometer scale.
-He colors two sectors $[p_1,q_1]$ and $[p_2,q_2]$ into red. 
-The color of the tape within the range between $p_1$ and $q_1$ is red. 
-The color of the tape within the range between $p_2$ and $q_2$ is also red. 
-And the rest parts of the tape remain transparent. 
+With the aliquot sum, We can classify positive integers into three types: 
+abundant numbers, deficient numbers, and perfect numbers.
+The rules are as follows.
+\begin{enumerate}
+\item A positive integer $x$ is an abundant number if $s(x)>x$.
+\item A positive integer $y$ is a deficient number if $s(y)<y$.
+\item A positive integer $z$ is a perfect number if $s(z)=z$.
+\end{enumerate}
 
-To verify Bob's skill, we ask Ben, the tape folding master, to help us.
-Ben can fold the tape perfectly at any position. 
-If Ben fold the tape at $x$, then the new position of a certain point $p$ 
-will be one of the following cases.
-\begin{itemize}
-\tightlist
-\item If $p=x$, then it becomes the new head of the tape, i.e, it becomes $0$.
-\item If $p>x$, then it becomes $p-x$.
-\item If $p<x$, then it becomes $x-p$. 
-\end{itemize}
-After Ben folds the tape, we measure the total length of the red part of the
-new tape. 
-If the red part has the expected length, then we will believe Bob and Ben
-are both masters in their skills.
-Obviously, the color of some position of the new tape is determined by the 
-colors of the corresponding positions of the old tape. 
-A position of the new tape is colored in red if one of the corresponding 
-positions in the old tape is colored in red. 
-
-Bob has already colored the tape, and Ben has proposed the positions to be
-folded. 
-Please write a program to compute the expected lengths colored in red.
+You are given a list of positive integers. 
+Please write a program to classify them.
