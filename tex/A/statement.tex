@@ -1,55 +1,31 @@
-Pac-Man is a maze-chase video game developed in 1980s. 
-The player controls the character ``Pac-Man'' to eat dots in a maze while
-avoiding enemy characters ``ghosts.'' 
-All characters may move in four directions: up, down, left, right.
-The game ends when one of the following two conditions is met:
+The Olympic Games are the most important sporting events in human history.
+Usually, the Olympic Games are held every four years.
+However, the 2020 Olympic Games just finished in August 2021 due to
+the COVID-19 outbreaks.
+
+There are more than 200 nations participating the Olympic Games. 
+Thousands of athletes around the world compete in various sports. 
+Athelete represent their countries or National Olympuc Committees (NOCs)
+to compete for medals. 
+Therefore, each country or NOC may win medals in the competitions.
+
+There are three types of medals: gold medals, silver medals, and bronze medals. 
+Typically, the gold medals are awarded to the winner of the competitions,
+and silver medals are awarded to the runner-up.
+Most of the bronze medals are awarded to the second runner-up.
+However, there can be no second runner-up in some sports.
+The bronze medals are awarded in different manners. 
+For example, in a few tournament sports, such as wrestling, boxing, and judo,
+two bronze medals are awarded to the eliminated semi-finalists. 
+
+A country or NOC has a better rank than another country or NOC
+if one of the following conditions holds.
 \begin{enumerate}
-\tightlist
-\item Pac-Man eats all dots in the maze. In this case, the player wins.
-\item A ghost catches Pac-Man. In this case, the player loses.
+\item It wins more gold medals.
+\item It wins the same ammount of gold medals, and it wins more silver medals.
+\item It wins the same ammount of gold medals and silver medals, 
+and it wins more bronze medals.
 \end{enumerate}
 
-\begin{figure}[h]
-\center
-\includegraphics[width=0.25\textwidth]{image/pacman.png}
-\caption{Pac-Man gameplay (image from Wikipedia)}
-\end{figure}
-
-Adam is learning how to create games with modern programming tools.
-To practice the skills, he tries to reproduce the Pac-Man 
-game with some modification.
-In Adam's game, the playable character is a ``ghost,'' 
-and the enemy character is ``Pac-Man.'' 
-Since he changes the roles of the ghost and Pac-Man, 
-he also changes the ending conditions of the game.
-\begin{enumerate}
-\tightlist
-\item Pac-Man eats all dots in the maze. In this case, the player loses.
-\item The ghost controlled by the player catches Pac-Man. In this case, the player wins.
-\end{enumerate}
-
-Adam has almost developed the first full functioning version of his game.
-He wants to test his game and creates a simple stage for testing.
-The maze of the stage is based on a 10-by-10 grid. 
-We label the cell at the intersection of row $r$ and column $c$ with 
-$(r,c)$. In this problem, rows and columns are numbered from $0$ to $9$.
-Each grid cell contains exact one dot.
-The exterior boundary of the grid are walls. 
-No characters may move to the area outside of the grid.
-Inside the grid, there are no walls or obstacles.
-All characters may move freely from a cell to any cell adjacent to it.
-Note that two grid cells $(r_1,c_1)$ and $(r_2,c_2)$ are adjacent to each other 
-if and only if $|r_1-r_2|+|c_1-c_2|=1$.
- 
-Adam has to prepare the movements of Pac-Man for the testing. 
-He needs a set of Pac-Man's trajectories with diversity, 
-but any trajectory must satisfy the following requirements.
-\begin{itemize}
-\tightlist
-\item Pac-Man eats all dots in the maze if it follows the trajectory.
-\item Pac-Man moves at most 10000 steps.
-\end{itemize}
-Adam needs your help to generate a trajectory starting at cell $(x,y)$.
-Please write a program to generate a trajectory of Pac-Man satisfying all 
-requirements above and starting at cell $(x,y)$.
-
+Please write a program to find the country or NOC which has the best rank
+among all countries and NOCs.
