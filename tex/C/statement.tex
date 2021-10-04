@@ -1,7 +1,17 @@
-There are $n$ magical circles on a plane. 
-They are centered at $(x_1,y_1), (x_2,y_2), \dots, (x_n, y_n)$, respectively.
-In the beginning, the radius of each circle is $0$, 
-and the radii of all magical circles will grow at the same rate.
-When a magical circle touches another, then it stops growing. 
-Write a program to calculate the total area of all magical 
-circles at the end of growing.
+You are given an array $[p[1], p[2], ..., p[n]]$ where
+all the numbers in the array are distinct.
+In addition, the numbers are positive integers between $1$ and $n$.
+You can only perform the following operations on the array:
+Pick two indices $x$ and $y$ such that $|p[x] - p[y]| = 1$, 
+and then swap the values of $p[x]$ and $p[y]$.
+We now want to sort this array in ascending order. 
+That is, to make $p[i] = i$ for all $i\in\{1,2,\dots,n\}$.
+For example, we can sort the array $[p[1]=2,p[2]=3,p[3]=1]$ in two operations:
+\begin{enumerate}
+\item Swap $p[1]$ and $p[3]$. The array becomes $[p[1]=1,p[2]=3,p[3]=2]$.
+\item Swap $p[2]$ and $p[3]$. The array becomes $[p[1]=1,p[2]=2,p[3]=3]$ which
+is sorted in ascending order.
+\end{enumerate}
+
+Please write a program to compute the minimum number of operations to
+sort a given array.

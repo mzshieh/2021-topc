@@ -1,20 +1,39 @@
-There is a rectangle garden in front of Gina's house.
-The garden can be seen as an $n$-by-$m$ rectangular grid.
-All grid cells are identical squares, and two grid cells are 
-considered adjacent if they share an common edge.
+In a forest park, there are $n$ places of interest (numbered from $1$ to $n$)
+and $n-1$ trails (numbered from 1 to $n-1$) connecting the places of interest. 
+For every $i\in\{1,2,\dots,n-1\}$, trail $i$ has two ends at place $a_i$ and 
+place $b_i$, and the trail does not pass any place of interest except its ends. 
+Moreover, the trails do not have any intersection except the ends.
 
-Gina loves cacti and wants to plant as many cacti as possible in the garden.
-However, there are some constraints on planting cacti.
+To protect the forest, visitors may only walk along the trails 
+(in any direction)
+and inside the places of interest. For any pair of places
+of interest $(x, y)$ where $x\neq y$, 
+there exists a sequence of trails $s_1,s_2,\dots,s_k$
+satisfying the following conditions.
 \begin{itemize}
-\item The soil can be too wet in some of the cells and therefore is not 
-      suitable for cacti. Gina cannot plant cacti in those cells.
-\item Since the soil in each cell is not fertile enough to grow two or more 
-      cacti, Gina may plant at most one cactus in a cell.
-\item At most one cactus can be planted in any pair of adjacent cells. 
-      Otherwise, the cacti in those cells may be harmed by their neighbor's
-      thorns.
+\item Place $x$ is an end of trail $s_1$.
+\item Place $y$ is an end of trail $s_k$.
+\item For $1\le i < k$, trail $s_i$ and trail $s_{i+1}$ have a common end.
+\item If place $z$ is the common end of trails $s_i$ and $s_{i+1}$ for some
+$i\in\{1,\dots,k-1\}$, then $z$ cannot be a common end of any other pairs of 
+trails in $s_1,\dots,s_k$.
 \end{itemize}
+In other words, a visitor move from $x$ to $y$ by walking along the trails
+$s_1,s_2,\dots,s_k$ without visiting a place of interest twice. 
+Such sequence is called a simple path from $x$ to $y$.
 
-Please write a program to help Gina calculate the maximum possible number of 
-cacti can be planted, and also a way of plantings that meet the listed 
-constraints.
+The administration division of the park plans to host an event in the park.
+It puts labels on the trails. For trail $t$, the label on $t$ is an
+integer $\ell(t)$, and a visitor can learn $\ell(t)$ by walk through 
+trail $t$.
+A simple path $s_1,s_2,\dots,s_k$ from $x$ to $y$ is 
+with strictly increasing labels if $\ell(s_1)<\ell(s_2)<\cdots<\ell(s_k)$.
+By reporting $m$ distinct simple paths with 
+strictly increasing labels to the administration division, 
+a visitor may win $m$ free tickets for future visits.
+
+You friend George just visit the park, and learn all labels on the trails.
+He wants to win free tickets for future visits with you.
+Please write a program to compute the number of distinct simple paths 
+with strictly increasing labels in
+the forest park.

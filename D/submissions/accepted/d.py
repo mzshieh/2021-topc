@@ -1,13 +1,24 @@
-from fractions import Fraction
+from decimal import *
 
-P, Q, R = map(Fraction, input().split(' '))
-S = P - Q + R
-Area = P + Q + R + S
+getcontext().prec = 75
 
-x = 2 * (P + S) / Area - Fraction(1) / 2
-y = 2 * (P + Q) / Area - Fraction(1) / 2
+n = int(input())
 
-if x <= 0 or x >= 1 or y <= 0 or y >= 1:
-    print(-1)
-else:
-    print(x, y)
+table = {1: Decimal(0.0)}
+
+def not_drunk(x):
+    if x == 1 or table.get(x) != None:
+        return table[x]
+    result = Decimal(1.0)
+    for i in range(1, x):
+        result += not_drunk(i)
+    table[x] = result / Decimal(x)
+    return table[x]
+
+def drunk(x):
+    result = Decimal(1.0)
+    for i in range(2, x):
+        result += not_drunk(i)
+    return result / Decimal(x-1)
+
+print(drunk(n))
