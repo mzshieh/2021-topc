@@ -1,0 +1,17 @@
+The ICPC kingdom has a $n$ city, and there are $m$ roads connecting these cities. 
+Each road connected two cities and can travel in both directions. 
+There are $a_i$ residents living in the $i$-th city.
+The $j$-th road connects the $u_j$ city and $v_j$ city. 
+And the economic benefit of the $j$-th road is $\lfloor\sqrt{a_{u_j}+a_{v_j}}\rfloor$.
+
+One day, the enemy comes to the ICPC kingdom and destroys all the roads.
+The king of ICPC hired $w$ workers to fix the road.
+The $i$-th worker can only fix the roads of index $b_1,b_2,b_3...b_{x_i}$.
+And each worker can only fix one road.
+Now the king wants to fix the road to make the kingdom normal.
+Considering the cost, the king does not want the fix plan to contain the useless roads.
+A plan exists for useless roads which means that there is a pair of city $a,b$,
+there is more than one simple path from $a$ to $b$.
+A simple path is a path $c_1,c_2,c_3,..c_z$ that $c_i \neq c_j$ for each $1\leq i,j \leq z,i\neq j$.
+The king asked you to calculate that if we want to fix exactly $k$ road without useless roads, how much is the maximum economic benefit.
+You need to calculate for each $k$ between $1$ and $n-1$.

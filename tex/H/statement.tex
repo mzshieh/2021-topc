@@ -1,0 +1,15 @@
+You are given a simple undirected graph consisting of $n$ nodes and $m$ edges. 
+Each node $i$ has a value $V_i$ and the weight of each edge $(u, v)$ is $V_u$ 
+xor $V_v$.
+
+There are $q$ constraints represented in five variables \verb+t u i v j+
+\begin{itemize}
+\item if $t = 0$, then $getBit(V_u, i) = getBit(V_v, j)$
+\item if $t = 1$, then $getBit(V_u, i) \neq getBit(V_v, j)$
+\end{itemize}
+where $getBit(x, i)$ is \verb+(x >> i) & 1+.
+
+Some values of nodes are missing. You need to assign them to make 
+$\sum_{(u,v) \in E}$ popcount($V_u$ xor $V_v$) as small as possible 
+under the all given constraints where popcount(x) is the number of 
+bit $1$ in $x$.
