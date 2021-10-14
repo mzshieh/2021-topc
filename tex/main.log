@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.6.9)  7 OCT 2021 17:05
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.6.9)  14 OCT 2021 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1225,10 +1225,12 @@ File: image/header.png Graphic file (type bmp)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
  [8]
+(./E/statement.tex) (./E/input.tex) (./E/output.tex) (./E/spec.tex)
+(../E/data/sample/1.in) (../E/data/sample/1.ans) (../E/data/sample/2.in)
+(../E/data/sample/2.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
-
-[9]
+ [9]
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
  [10] (./F/statement.tex
@@ -1236,34 +1238,35 @@ Missing character: There is no   (U+2009) in font [lmroman12-regular]:mapping=
 ex-text;!
 Missing character: There is no   (U+2009) in font [lmroman12-regular]:mapping=t
 ex-text;!
-) (./F/input.tex) (./F/output.tex) (./F/spec.tex)
-(../F/data/sample/1.in) (../F/data/sample/1.ans)
+) (./F/input.tex)
+(./F/output.tex) (./F/spec.tex) (../F/data/sample/1.in) (../F/data/sample/1.ans
+)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
  [11]
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [12] (./G/statement.tex)
-(./G/input.tex) (./G/output.tex) (./G/spec.tex
-File: image/header.png Graphic file (type bmp)
-<image/header.png>
- [13]
-File: image/header.png Graphic file (type bmp)
-<image/header.png>
- [14]) (./H/statement.tex)
-(./H/input.tex) (./H/output.tex) (./H/spec.tex) (../H/data/sample/1.in)
-(../H/data/sample/1.ans)
-File: image/header.png Graphic file (type bmp)
-<image/header.png>
- [15] (../H/data/sample/2.in) (../H/data/sample/2.ans)
+ [12] (./G/statement.tex) (./G/input.tex) (./G/output.tex) (./G/spec.tex
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
 
-[16] (./I/statement.tex) (./I/input.tex) (./I/output.tex) (./I/spec.tex
+[13]
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
-
-[17]) (../I/data/sample/1.in) (../I/data/sample/1.ans)
+ [14]) (./H/statement.tex) (./H/input.tex) (./H/output.tex) (./H/spec.tex)
+(../H/data/sample/1.in) (../H/data/sample/1.ans)
+File: image/header.png Graphic file (type bmp)
+<image/header.png>
+ [15] (../H/data/sample/2.in)
+(../H/data/sample/2.ans)
+File: image/header.png Graphic file (type bmp)
+<image/header.png>
+ [16] (./I/statement.tex) (./I/input.tex)
+(./I/output.tex) (./I/spec.tex
+File: image/header.png Graphic file (type bmp)
+<image/header.png>
+ [17]) (../I/data/sample/1.in)
+(../I/data/sample/1.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
  [18]
@@ -1274,10 +1277,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29167 strings out of 476919
- 577485 string characters out of 5827675
+ 29187 strings out of 476919
+ 577847 string characters out of 5827675
  954440 words of memory out of 5000000
- 48507 multiletter control sequences out of 15000+600000
+ 48511 multiletter control sequences out of 15000+600000
  407328 words of font info for 56 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  87i,11n,89p,1193b,1567s stack positions out of 5000i,500n,10000p,200000b,80000s
