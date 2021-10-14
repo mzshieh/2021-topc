@@ -1,121 +1,68 @@
-#include<bits/stdc++.h>
-#define pb push_back
+#include <bits/stdc++.h>
 using namespace std;
-struct Dinic{
-    static const int MXN = 200005;
-    struct Edge{ int v,f,re; Edge(int a,int b,int c):v(a),f(b),re(c){}};
-    int n,s,t,level[MXN];
-    vector<Edge> E[MXN];
-    void init(int _n, int _s, int _t){
-        n = _n; s = _s; t = _t;
-        for (int i=0; i<=n; i++) E[i].clear();
-    }
-    void add_edge(int u, int v, int f){
-        E[u].pb(Edge(v,f,E[v].size()));
-        E[v].pb(Edge(u,0,E[u].size()-1));//direct
-    }
-    bool BFS(){
-        fill(level,level+MXN,-1);
-        queue<int> que;
-        que.push(s);
-        level[s] = 0;
-        while (!que.empty()){
-            int u = que.front(); que.pop();
-            for (auto it : E[u]){
-                if (it.f > 0 && level[it.v] == -1){
-                    level[it.v] = level[u]+1;
-                    que.push(it.v);
-                }
-            }
-        }
-        return level[t] != -1;
-    }
-    int DFS(int u, int nf){
-        if (u == t) return nf;
-        int res = 0;
-        for (auto &it : E[u]){
-            if (it.f > 0 && level[it.v] == level[u]+1){
-                int tf = DFS(it.v, min(nf,it.f));
-                res += tf; nf -= tf; it.f -= tf;
-                E[it.v][it.re].f += tf;
-                if (nf == 0) return res;
-            }
-        }
-        if (!res) level[u] = -1;
-        return res;
-    }
-    int flow(int res=0){
-        while ( BFS() ){
-            res += DFS(s,2147483647);
-        }
-        return res;
-    }
-}flow;
-int main(){
-    int n,m;
-    scanf("%d %d",&n,&m);
-    vector<vector<char> > s(n);
-    flow.init(n*m+2,0,n*m+1);
-      int tot=0;
-    for(int i = 0;i<n ;i++){
-        for(int j = 0;j<m;j++){
-            char c;
-            scanf(" %c",&c);
-            s[i].pb(c);
-            if(c=='.'){
-                tot++;
-               // printf("%d %d\n",i,j);
-                if((i+j)&1)flow.add_edge(0,i*m+j+1,1);
-                else flow.add_edge(i*m+j+1,n*m+1,1);
-            }
-        }
-    }
-    int X[4]={0,0,1,-1};
-    int Y[4]={1,-1,0,0};
-  
-    for(int i=0;i<n;i++){
-        for(int j = 0;j<m;j++){
-            if((i+j)&1)
-            for(int k  =0;k<4;k++){
-                int x=i+X[k],y=j+Y[k];
-                if(x>=0&&x<n&&y>=0&&y<m){
-                    flow.add_edge(i*m+j+1,x*m+y+1,1);
-                }
-            }
-        }
-    }
-    printf("%d\n",tot-flow.flow());
-    queue<int> q;
-    q.push(0);
-    
-    int vis[100005]={};
-    vis[0]=1;
-    while(!q.empty()){
-        int x=q.front();
-        q.pop();
-        for(auto it:flow.E[x]){
-            if(it.f&&!vis[it.v]){
-                q.push(it.v);
-                vis[it.v]=1;
-            }
-        }
-    }
-    for(int i = 0;i<n;i++){
-        for(int j = 0;j<m;j++){
-            if(s[i][j]=='.'){
-                if((i+j)&1){
-                    if(vis[i*m+j+1])s[i][j]='C';
-                }
-                else{
-                    if(!vis[i*m+j+1])s[i][j]='C';
-                }
-            }
-        }
-    }
-    
-    for(auto it:s){
-        for(auto it2:it)printf("%c",it2);
-        printf("\n");
-    }
+#define ll long long
+#define fr(i,j,k) for(int i=j;i<k;i++)
+#define f(n) fr(i,0,n)
+#define f1(n) fr(i,1,n+1)
+#define pb push_back
+#define F first
+#define S second
+#define all(x) x.begin(), x.end()
+const int mod = 998244353;
+const int maxn = 200005;
 
+void go() {
+  int n;
+  cin >> n;
+  map<int,vector<pair<int,int>>>mp;
+  for (int i = 0 ; i < n - 1 ; i ++) {
+    int x, y, a;
+    cin >> x >> y >> a;
+    mp[a].push_back({x, y});
+  }
+  map<int,ll>ans;
+  
+  for (auto &i : mp) {
+    map<int,ll>chg;
+    for (auto &j : i.S) {
+        if (chg.count(j.F)) {
+            chg[j.F]++;
+        }
+        else {
+            chg[j.F] = ans[j.F] + 1;
+        }
+        chg[j.F] += ans[j.S];
+        if (chg.count(j.S)) {
+            chg[j.S]++;
+        }
+        else {
+            chg[j.S] = ans[j.S] + 1;
+        }
+        chg[j.S] += ans[j.F];
+    }
+    for (auto &i : chg) {
+        ans[i.F] = i.S;
+    }
+  }
+  long long sum = 0;
+  for (auto &i : ans) {
+    sum += i.S;
+  }
+  cout << sum << '\n';
+}
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int c = 0;
+    int t;
+    if (!c) {
+        t = 1;
+    }
+    else {
+        cin >> t;
+    }
+    while (t--) {
+        go();
+    }
+    
 }
