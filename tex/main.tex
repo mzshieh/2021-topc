@@ -72,14 +72,14 @@
 	\stepcounter{ncase}
 	\IfFileExists{../#1/data/sample/\arabic{ncase}.in}
     {
-		\vspace{-3mm}
-		\begin{paracol}{2}
+		\vspace{-1mm}
+		%\begin{paracol}{2}
 			\subsection*{Sample Input \arabic{ncase}}
 			\lstinputlisting{../#1/data/sample/\arabic{ncase}.in}
-			\switchcolumn
+			%\switchcolumn
 			\subsection*{Sample Output \arabic{ncase}}
 			\lstinputlisting{../#1/data/sample/\arabic{ncase}.ans}
-		\end{paracol}
+		%\end{paracol}
 		\testdata{#1}
     }{}
 }

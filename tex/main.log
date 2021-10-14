@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.6.9)  14 OCT 2021 20:05
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.6.9)  14 OCT 2021 20:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1180,17 +1180,13 @@ Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
 (xeCJK)                
 (xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
 
-(../A/data/sample/1.in
-Overfull \hbox (0.75398pt too wide) in paragraph at lines 4--5
-[][][][][][][][][][][][][][][][] 
- []
-
-) (../A/data/sample/1.ans) (../A/data/sample/2.in) (../A/data/sample/2.ans)
+(../A/data/sample/1.in) (../A/data/sample/1.ans) (../A/data/sample/2.in)
+(../A/data/sample/2.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
-
-[2] (./B/statement.tex) (./B/input.tex) (./B/output.tex) (./B/spec.tex)
-(../B/data/sample/1.in) (../B/data/sample/1.ans)
+ [2] (./B/statement.tex) (./B/input.tex)
+(./B/output.tex) (./B/spec.tex) (../B/data/sample/1.in) (../B/data/sample/1.ans
+)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
  [3]
@@ -1203,35 +1199,35 @@ Missing character: There is no   (U+2009) in font [lmroman12-regular]:mapping=
 ex-text;!
 Missing character: There is no   (U+2009) in font [lmroman12-regular]:mapping=t
 ex-text;!
-)
-(./C/input.tex
+) (./C/input.tex
 Missing character: There is no   (U+2009) in font [lmroman12-regular]:mapping=t
 ex-text;!
 Missing character: There is no   (U+2009) in font [lmroman12-regular]:mapping=t
 ex-text;!
-) (./C/output.tex) (./C/spec.tex) (../C/data/sample/1.in)
-(../C/data/sample/1.ans) (../C/data/sample/2.in) (../C/data/sample/2.ans)
+) (./C/output.tex) (./C/spec.tex
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
 
-[5]
+[5]) (../C/data/sample/1.in) (../C/data/sample/1.ans) (../C/data/sample/2.in)
+(../C/data/sample/2.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [6] (./D/statement.tex) (./D/input.tex) (./D/output.tex) (./D/spec.tex)
-(../D/data/sample/1.in) (../D/data/sample/1.ans) (../D/data/sample/2.in)
-(../D/data/sample/2.ans)
+ [6] (./D/statement.tex) (./D/input.tex)
+(./D/output.tex) (./D/spec.tex
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [7] (../D/data/sample/3.in) (../D/data/sample/3.ans)
-(./D/note.tex)
+ [7]) (../D/data/sample/1.in)
+(../D/data/sample/1.ans) (../D/data/sample/2.in) (../D/data/sample/2.ans)
+(../D/data/sample/3.in) (../D/data/sample/3.ans) (./D/note.tex)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [8] (./E/statement.tex) (./E/input.tex) (./E/output.tex)
-(./E/spec.tex) (../E/data/sample/1.in) (../E/data/sample/1.ans)
-(../E/data/sample/2.in) (../E/data/sample/2.ans)
+ [8]
+(./E/statement.tex) (./E/input.tex) (./E/output.tex) (./E/spec.tex)
+(../E/data/sample/1.in) (../E/data/sample/1.ans) (../E/data/sample/2.in)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [9]
+
+[9] (../E/data/sample/2.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
  [10] (./F/statement.tex
@@ -1239,65 +1235,53 @@ Missing character: There is no   (U+2009) in font [lmroman12-regular]:mapping=
 ex-text;!
 Missing character: There is no   (U+2009) in font [lmroman12-regular]:mapping=t
 ex-text;!
-)
-(./F/input.tex) (./F/output.tex) (./F/spec.tex) (../F/data/sample/1.in)
-(../F/data/sample/1.ans) (../F/data/sample/2.in
-Overfull \hbox (43.95442pt too wide) in paragraph at lines 2--3
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][] 
- []
-
-) (../F/data/sample/2.ans
+) (./F/input.tex)
+(./F/output.tex) (./F/spec.tex) (../F/data/sample/1.in)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [11])
-File: image/header.png Graphic file (type bmp)
-<image/header.png>
- [12] (./G/statement.tex) (./G/input.tex)
-(./G/output.tex) (./G/spec.tex
-File: image/header.png Graphic file (type bmp)
-<image/header.png>
- [13]
-File: image/header.png Graphic file (type bmp)
-<image/header.png>
- [14]) (../G/data/sample/1.in)
-(../G/data/sample/1.ans) (../G/data/sample/2.in) (../G/data/sample/2.ans)
+ [11]
+(../F/data/sample/1.ans) (../F/data/sample/2.in) (../F/data/sample/2.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
 
-[15]
+[12] (./G/statement.tex) (./G/input.tex) (./G/output.tex) (./G/spec.tex
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [16] (./H/statement.tex) (./H/input.tex) (./H/output.tex) (./H/spec.tex)
-(../H/data/sample/1.in) (../H/data/sample/1.ans)
+
+[13]) (../G/data/sample/1.in) (../G/data/sample/1.ans) (../G/data/sample/2.in)
+(../G/data/sample/2.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [17] (../H/data/sample/2.in)
-(../H/data/sample/2.ans)
+ [14] (./H/statement.tex) (./H/input.tex)
+(./H/output.tex) (./H/spec.tex) (../H/data/sample/1.in
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [18] (./I/statement.tex) (./I/input.tex)
-(./I/output.tex) (./I/spec.tex
+ [15])
+(../H/data/sample/1.ans) (../H/data/sample/2.in) (../H/data/sample/2.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [19]) (../I/data/sample/1.in)
-(../I/data/sample/1.ans)
+
+[16] (./I/statement.tex) (./I/input.tex) (./I/output.tex) (./I/spec.tex
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [20]
+
+[17]) (../I/data/sample/1.in) (../I/data/sample/1.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
- [21] (./main.aux)
+ [18]
+File: image/header.png Graphic file (type bmp)
+<image/header.png>
+ [19] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29217 strings out of 476919
- 578492 string characters out of 5827675
- 965440 words of memory out of 5000000
- 48521 multiletter control sequences out of 15000+600000
+ 29069 strings out of 476919
+ 575707 string characters out of 5827675
+ 964414 words of memory out of 5000000
+ 48373 multiletter control sequences out of 15000+600000
  407328 words of font info for 56 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 87i,12n,89p,1193b,1970s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,12n,89p,1193b,1720s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (21 pages).
+Output written on main.pdf (19 pages).
