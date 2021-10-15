@@ -1,16 +1,19 @@
 Suppose you are given an array of $n$ entries
-where each entry of the array is either $0$ or $1$.
-A subarray $[a[\ell],a[\ell+1],\dots,a[r]]$ of an array
-$[a[1], a[2], \dots, a[n]]$ if $1\le \ell \le r\le n$.
+where each array entry is either $0$ or $1$.
+For any pair $(\ell,r)$ such that $1\le \ell \le r\le n$, 
+$[a[\ell],a[\ell+1],\dots,a[r]]$ is a subarray of the array
+$[a[1], a[2], \dots, a[n]]$.
 An alternating subarray $[a[\ell],a[\ell+1],\dots,a[r]]$ of 
 $[a[1], a[2], \dots, a[n]]$
-if $a[\ell]\neq a[\ell+1]\neq \cdots \neq a[r]$. I.e., an arbitrary entry
+if $a[\ell]\neq a[\ell+1]\neq \cdots \neq a[r]$. I.e., every entry
 in the subarray is different from its neighbors in the subarray.
+Since the definition of alternating subarrays only considers the entries in
+the subarrays, $[1,0,1]$ is still an alterating subarray of $[1,1,0,1,1]$.
 
 In this problem, two types of operations will be applied on the given array.
 \begin{itemize}
 \item $1~\ell~r$: for every $i\in[\ell,r]$, change $a[i]$ into $1-a[i]$.
-\item $2~\ell~r$: report the number of pairs $(x, y)$ such that 
+\item $2~\ell~r$: report the total number of pairs $(x, y)$ such that 
 $\ell \leq x \leq y \leq r$ and subarray 
 $[a[x],a[x+1],\dots,a[y]]$ is an alternating subarray.
 \end{itemize}

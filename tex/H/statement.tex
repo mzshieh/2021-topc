@@ -1,15 +1,26 @@
 You are given a simple undirected graph consisting of $n$ nodes and $m$ edges. 
-Each node $i$ has a value $V_i$ and the weight of each edge $(u, v)$ is $V_u$ 
-xor $V_v$.
+The nodes are numbered from $1$ to $n$, 
+and the edges are numbered from $1$ to $m$.
+Node $i$ has a non-negative integer value $V_i$ and the weight $W_{u,v}$ of 
+edge $\{u, v\}$ is defined as $\left\|V_u\oplus V_v\right\|$
+where $\oplus$ is the exclusive-or operator (equivalent to \verb+^+ in C) and
+$\|x\|$ is the number of set bits in the binary representation non-negative
+integer $z$.
 
-There are $q$ constraints represented in five variables \verb+t u i v j+
+The node values $V_1,V_2,\dots,V_n$ must satisfy $q$ constraints.
+Each of the constraints can be represented as 
+a 5-tuple $(t,u,i,v,j)$.
 \begin{itemize}
 \item if $t = 0$, then $getBit(V_u, i) = getBit(V_v, j)$
 \item if $t = 1$, then $getBit(V_u, i) \neq getBit(V_v, j)$
 \end{itemize}
-where $getBit(x, i)$ is \verb+(x >> i) & 1+.
+where the function $getBit(x, i)$ returns the $(i+1)$-th least significant
+bit of $x$. For examples, $getBit(11, 0)$ is $1$ and $getBit(11,2)=0$. 
+In the C programming language, $getBit(x, i)$ can be computed by 
+\verb+((x >> i) & 1U)+ if $x$ is a 32-bit unsigned integer 
+and $i$ is a non-negative integer at most $31$.
 
-Some values of nodes are missing. You need to assign them to make 
-$\sum_{(u,v) \in E}$ popcount($V_u$ xor $V_v$) as small as possible 
-under the all given constraints where popcount(x) is the number of 
-bit $1$ in $x$.
+Unfortunately, some node values are missing now. 
+Your task is to assign new values to them to minimize 
+$\sum_{\{u,v\} \in E}W_{u,v}$ without violating any given constraint. 
+Please write a program to help yourself to complete this task.
