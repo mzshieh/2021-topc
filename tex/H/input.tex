@@ -1,8 +1,15 @@
-The first line of the input contains two positive integers $n$ and $m$. 
-Then $m$ lines follow. 
-Each of the following lines contains two integers $u$ and $v$. 
-Then one line containing $n$ integers follow. 
-Each integer denotes the value of each node. 
-If the value of the node is missing, it will be \verb+-1+. 
-Then one integer $q$ and $q$ lines follow. 
-Each line contains five integers $t, u, i, v, j$
+The input consists of five parts.
+The first part contains one line, and that line 
+contains two positive integers $n$ and $m$. 
+$n$ is the number of nodes, and $m$ is the number of edges.
+The second part contains $m$ lines.
+Each of them contains two integers $u$ and $v$ indicating an edge $\{u, v\}$
+of the given graph.
+The third part contains one line.
+That line consists of $n$ space-separated integers $x_1,x_2,\dots,x_n$. 
+If the node value $V_i$ is missing, $x_i$ will be \verb+-1+. 
+Otherwise, $V_i$ is $x_i$.
+The fourth part contains one integer $q$ indicating the number of constraints.
+The fifth part contains $q$ lines, and each of them contains
+five space-separated integers $t, u, i, v, j$ indicating that 
+$(t, u, i, v, j)$ is a constraint.

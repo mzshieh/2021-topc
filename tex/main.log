@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.6.9)  15 OCT 2021 15:24
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/Arch Linux) (preloaded format=xelatex 2021.6.1)  16 OCT 2021 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1274,11 +1274,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--164
  []
 
 (./J/input.tex) (./J/output.tex) (./J/spec.tex) (../J/data/sample/1.in)
-(../J/data/sample/1.ans) (../J/data/sample/2.in) (../J/data/sample/2.ans)
+(../J/data/sample/1.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
-
-[19] (../J/data/sample/3.in) (../J/data/sample/3.ans)
+ [19] (../J/data/sample/2.in) (../J/data/sample/2.ans)
+(../J/data/sample/3.in) (../J/data/sample/3.ans)
 File: image/header.png Graphic file (type bmp)
 <image/header.png>
  [20] (./main.aux)
@@ -1292,6 +1292,6 @@ Here is how much of TeX's memory you used:
  48366 multiletter control sequences out of 15000+600000
  407320 words of font info for 55 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 87i,12n,89p,1193b,925s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,11n,89p,1193b,925s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (20 pages).
