@@ -1,14 +1,16 @@
-The first line contains $n$ and $m$ seperated with white space 
-indicating the number of city and number of road.
-The second line contains $n$ number $a_1,a_2,a_3...a_n$ seperated 
-with white space indicating the resident in each city.
+The first line contains $n$ and $m$ seperated by a white space.
+$n$ is the number of cities, and $m$ is the number of roads.
+The second line contains $n$ numbers $a_1,a_2,a_3...a_n$ seperated 
+with white spaces indicating the number of the residents in cities $1,2,\dots,n$, respectively.
 There are $m$ lines following, each line contains $u_j$ and $v_j$ 
-separated with white space indicating the road with index $j$ 
-connecting the city $u_j$ and city $v_j$. 
-The index of the road starts from $1$.
-Next line contains a number $w$ indicating the number of workers.
-The following $w$ line indicates the kind of road which the work can fix.
-The $i$-th line contains a number $x_i$ indicating the number of road 
-that the $i$-th worker can fix and following contains $x_i$ distinct 
-number $b_1,b_2,b_3...b_{x_i}$ seperated with white space indicating 
-the index of these road.
+separated with white space. Road $j$ 
+connects city $u_j$ and city $v_j$. 
+The third line contains a number $w$ indicating the number of workers.
+The following $w$ line indicates the roads that can be fixed the workers.
+The $(3+i)$-th line contains several numbers separated by spaces. 
+The first number is $x_i$ indicating the number of roads 
+that the $i$-th worker can fix.
+There are $x_i$ distinct integers 
+$b_1,b_2,\dots,b_{x_i}$. 
+following in that line.
+The $i$-th worker can only fix one of roads $b_1,b_2,\dots,b_{x_i}$.
